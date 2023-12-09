@@ -1,0 +1,35 @@
+
+function scrollDown() {
+  window.scrollBy(0, 500); // You can adjust the scroll distance as needed (e.g., 500 pixels)
+}
+
+function clickConnectButtons() {
+  var connectButtons = document.querySelectorAll('button');
+  var minDelay = 55000; // Minimum delay in milliseconds (41 seconds)
+  var maxDelay = 69500; // Maximum delay in milliseconds (59 seconds)
+
+  for (var i = 0; i < connectButtons.length; i++) {
+    var buttonText = connectButtons[i].textContent.trim();
+    if (buttonText === 'Connect') {
+      console.log('Connecting with profile:', i + 1);
+      setTimeout(function (button) {
+        button.click();
+      }, getRandomDelay(minDelay, maxDelay), connectButtons[i]);
+    }
+  }
+}
+
+function getRandomDelay(min, max) {
+  var randomOffset = Math.random() * 59000; // Add a small random offset (up to 1 second)
+  return Math.floor(Math.random() * (max - min + 1)) + min + randomOffset;
+}
+
+function scrollAndClick() {
+  setInterval(function () {
+    scrollDown();
+    clickConnectButtons();
+  }, 69999); // Adjust the scroll and click interval (e.g., 49 seconds)
+}
+
+
+scrollAndClick();
