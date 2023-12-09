@@ -12,4 +12,8 @@
 
 7. This will help you build your connections on LinkedIn so you can easily do B2B marketing and reach lots of people
 
-8. Enjoy!
+8. The script is located in MAIN
+
+9. Feel free to alter and distribute the code
+
+10. Enjoy!
